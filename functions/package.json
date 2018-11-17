@@ -1,6 +1,6 @@
 {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
+  "name": "superego-functions",
+  "description": "Superego Firebase Functions",
   "scripts": {
     "lint": "eslint .",
     "serve": "firebase serve --only functions",
@@ -16,6 +16,9 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-google": "^0.11.0"
+  },
+  "engines": {
+    "node": "8"
   },
   "private": true
 }
