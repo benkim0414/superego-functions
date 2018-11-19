@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['install']
+  dir: 'functions'
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['lint']
+  dir: 'functions'
+- name: 'gcr.io/superego-222801/firebase'
+  args: ['deploy', '--project', 'superego-222801']
+  secretEnv: ['FIREBASE_TOKEN']
+secrets:
+- kmsKeyName: 'projects/superego-222801/locations/global/keyRings/cloudbuilder/cryptoKeys/firebase-token'
+  secretEnv:
+    FIREBASE_TOKEN: 'CiQAbKGMzwDr1X0xHksKX9Hdp6Y25spJ7G8pHxJNlEYYA9IfoLYSVwAlcwXq5hAygMTXHYyUOsOyF2MQlV2i2qiuDeQbMFzvyTDf4AisBf2djOWV2p3Jf1YTnT5SvkE2LOugHhRkv+7A87uZvIAzPsG+Aa5T/18x3nreUZ1uKQ=='
