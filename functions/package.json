@@ -2,7 +2,7 @@
   "name": "superego-functions",
   "description": "Superego Firebase Functions",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "./node_modules/.bin/eslint .",
     "serve": "firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
